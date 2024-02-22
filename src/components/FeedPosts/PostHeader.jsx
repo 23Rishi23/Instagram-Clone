@@ -7,7 +7,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { timeAgo } from "../../utils/timeAgo";
+import { timeSince } from "../../utils/timeSince";
 import useFollowUser from "../../hooks/useFollowUser";
 
 const PostHeader = ({ post, creatorProfile }) => {
@@ -45,7 +45,7 @@ const PostHeader = ({ post, creatorProfile }) => {
             <Skeleton w={"100px"} h={"10px"} />
           )}
 
-          <Box color={"gray.500"}>• {timeAgo(post.createdAt)}</Box>
+          <Box color={"gray.500"}>• {timeSince(post.createdAt)}</Box>
         </Flex>
       </Flex>
       <Box cursor={"pointer"}>

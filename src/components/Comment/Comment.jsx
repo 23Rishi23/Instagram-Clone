@@ -1,7 +1,7 @@
 import { Avatar, Flex, Skeleton, SkeletonCircle, Text } from "@chakra-ui/react";
 import useGetUserProfileByID from "../../hooks/useGetUserProfileByID";
 import { Link } from "react-router-dom";
-// import { timeSince } from "../../utils/timeSince";
+import { timeSince } from "../../utils/timeSince";
 
 const Comment = ({ comment }) => {
   const { isFetching, userProfile } = useGetUserProfileByID(comment.createdBy);
@@ -23,7 +23,7 @@ const Comment = ({ comment }) => {
           <Text fontSize={14}>{comment.comment}</Text>
         </Flex>
         <Text fontSize={12} color={"gray"}>
-          {/* {timeSince(comment.createdAt)} */}
+          {timeSince(comment.createdAt)}
         </Text>
       </Flex>
     </Flex>

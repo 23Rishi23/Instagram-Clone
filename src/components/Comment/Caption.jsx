@@ -1,7 +1,7 @@
 import { Avatar, Flex, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { timeAgo } from "../../utils/timeago";
 import useUserProfileStore from "../../store/userProfileStore";
+import { timeSince } from "../../utils/timeSince";
 
 const Caption = ({ post }) => {
   const userProfile = useUserProfileStore((state) => state.userProfile);
@@ -19,7 +19,7 @@ const Caption = ({ post }) => {
           </Link>
           <Text fontSize={14}>{post.caption}</Text>
           <Text fontSize={12} color={"gray.500"}>
-            {timeAgo(post.createdAt)}
+            {timeSince(post.createdAt)}
           </Text>
         </Flex>
       </Flex>
