@@ -17,7 +17,7 @@ import {
 import usePostComment from "../../hooks/usePostComment";
 import useAuthStore from "../../store/authStore";
 import useLikePost from "../../hooks/useLikePost";
-import { timeSince } from "../../utils/timeSince";
+// import { timeSince } from "../../utils/timeSince";
 import CommentsModal from "../Comment/CommentsModal";
 
 const PostFooter = ({ post, isProfilePage, creatorProfile }) => {
@@ -52,7 +52,7 @@ const PostFooter = ({ post, isProfilePage, creatorProfile }) => {
       </Text>
       {isProfilePage && (
         <Text fontSize={12} color={"gray"}>
-          Posted {timeSince(post.createdAt)}
+          {/* Posted {timeSince(post.createdAt)} */}
         </Text>
       )}
       {!isProfilePage && (
